@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 
 export const header = style({
-  position: "fixed",
+  position: "sticky",
   top: 0,
   display: "flex",
   flexDirection: "column",
