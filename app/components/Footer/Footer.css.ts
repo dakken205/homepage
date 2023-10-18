@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 
 export const footer = style({
-  padding: "36px 0",
+  padding: "36px 24px",
   width: "100%",
   minHeight: "400px",
 });
