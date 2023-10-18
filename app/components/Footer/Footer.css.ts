@@ -39,7 +39,7 @@ export const socials = style({
 
 export const socialIcon = style({
   color: "#888",
-  transition: "color 0.15s ease",
+  transition: "all 0.2s ease",
   selectors: {
     "&:hover": {
       color: "#fff",
