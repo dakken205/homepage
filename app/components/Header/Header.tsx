@@ -12,16 +12,16 @@ export default function Header() {
               <Image src="/logo.png" alt="" width={100} height={40} />
             </Link>
           </div>
-          <Link className={styles.navbarLink} href="vision">
+          <Link className={styles.navbarLink} href="/vision">
             Vision
           </Link>
-          <Link className={styles.navbarLink} href="activities">
+          <Link className={styles.navbarLink} href="/activities">
             Activities
           </Link>
-          <Link className={styles.navbarLink} href="departments">
+          <Link className={styles.navbarLink} href="/departments">
             Departments
           </Link>
-          <Link className={styles.navbarLink} href="contact">
+          <Link className={styles.navbarLink} href="/contact">
             Contact
           </Link>
         </div>
