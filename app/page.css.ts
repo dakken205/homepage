@@ -16,7 +16,6 @@ export const introTitle = style({
   fontWeight: "800",
   fontSize: "max(48px, min(5vw, 76px))",
   lineHeight: "1",
-  letterSpacing: "-.0.5em",
   padding: "24px",
 });
 
@@ -24,7 +23,6 @@ export const introSubtitle = style({
   color: "#888",
   fontSize: "max(15px, min(2vw, 20px))",
   lineHeight: "1.8",
-  letterSpacing: "-0.01em",
   fontWeight: "400",
   padding: "40px 32px",
   width: "calc(100% - 1% * 2)",
