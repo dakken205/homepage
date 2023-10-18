@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SubmitButton from "./submitButton";
+import SubmitButton from "../components/submitButton";
 import sendGmail from "../../services/sendGmail";
 import * as styles from "./page.css";
 

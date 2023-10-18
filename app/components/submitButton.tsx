@@ -4,7 +4,7 @@
 // See https://github.com/vercel/next.js/issues/49232
 // @ts-ignore
 import { experimental_useFormStatus as useFormStatus } from "react-dom";
-import * as styles from "./page.css";
+import * as styles from "../contact/page.css";
 
 export default function SubmitButton() {
   const { pending } = useFormStatus();
