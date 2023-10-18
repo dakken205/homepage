@@ -63,6 +63,15 @@ export const input = style({
   order: "1",
   outline: "none",
   transition: "border-color .15s, box-shadow .15s",
+  selectors: {
+    "&:hover": {
+      boxShadow: "0 0 0 1px hsla(0,0%, 33% ,1)",
+    },
+    "&:focus": {
+      borderColor: "hsla(0,0%, 80% ,1)",
+      boxShadow: "0 0 0 1px hsla(0,0%, 63% ,1)",
+    },
+  },
 });
 
 export const textarea = style({
@@ -87,6 +96,17 @@ export const button = style({
   outline: "none",
   border: "0",
   textDecoration: "none",
+  cursor: "pointer",
+  selectors: {
+    "&:hover": {
+      background: "hsla(0,0%, 20% ,1)",
+      boxShadow: "0 0 0 1px hsla(0,0%, 63% ,1)",
+    },
+    "&:focus": {
+      borderColor: "hsla(0,0%, 80% ,1)",
+      boxShadow: "0 0 0 1px hsla(0,0%, 63% ,1)",
+    },
+  },
 });
 
 export const privacyText = style({
