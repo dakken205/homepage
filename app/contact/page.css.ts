@@ -56,7 +56,7 @@ export const input = style({
   minWidth: "0",
   borderRadius: "6px",
   border: "none",
-  padding: "0 12px",
+  padding: "6px 12px",
   background: "#0a0a0a",
   color: "#fff",
   lineHeight: "normal",
@@ -77,6 +77,22 @@ export const input = style({
 export const textarea = style({
   height: "120px",
   resize: "none",
+  "::-webkit-scrollbar": {
+    width: "10px",
+    zIndex: "10",
+  },
+  "::-webkit-scrollbar-track": {
+    background: "hsla(0,0%, 10% ,1)",
+    borderRadius: "6px",
+  },
+  "::-webkit-scrollbar-thumb": {
+    background: "hsla(0,0%, 20% ,1)",
+    borderRadius: "6px",
+  },
+});
+
+globalStyle(`${textarea}::-webkit-scrollbar-thumb:hover`, {
+  background: "hsla(0,0%, 30% ,1)",
 });
 
 export const button = style({
