@@ -1,12 +1,16 @@
 import { style, globalStyle } from "@vanilla-extract/css";
 
-export const blogRoot = style({
+export const blog = style({
   width: "100%",
-  maxWidth: "calc(1216px)",
-  color: "hsla(0,0%, 93% ,1)",
-  textAlign: "center",
+  maxWidth: "1216px",
   margin: "60px auto",
   padding: "0 24px",
+});
+
+export const blogRoot = style({
+  width: "100%",
+  color: "hsla(0,0%, 93% ,1)",
+  textAlign: "center",
 });
 
 export const text = style({
