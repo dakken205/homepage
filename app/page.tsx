@@ -16,7 +16,7 @@ export default function Home() {
         <div className={styles.introButtons}>
           <Link
             className={`${styles.introButtonBase} ${styles.introWhiteButton}`}
-            href="/activities"
+            href="/about"
           >
             DA研を知る
           </Link>

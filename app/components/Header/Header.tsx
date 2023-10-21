@@ -12,17 +12,14 @@ export default function Header() {
               <Image src="/logo.png" alt="" width={100} height={40} />
             </Link>
           </div>
-          <Link className={styles.navbarLink} href="/vision">
-            Vision
+          <Link className={styles.navbarLink} href="/about">
+            DA研について
           </Link>
-          <Link className={styles.navbarLink} href="/activities">
-            Activities
-          </Link>
-          <Link className={styles.navbarLink} href="/departments">
-            Departments
+          <Link className={styles.navbarLink} href="/blog">
+            ブログ
           </Link>
           <Link className={styles.navbarLink} href="/contact">
-            Contact
+            お問い合わせ
           </Link>
         </div>
       </nav>
