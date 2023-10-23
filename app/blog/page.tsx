@@ -4,7 +4,7 @@ import * as styles from "./page.css";
 export default function Blog() {
   return (
     <div className={styles.blogRoot}>
-      <h1 className={styles.text}>DA研 Tech Blog</h1>
+      <h1 className={styles.text}>DakkensIO</h1>
       <div className={styles.posts}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((i) => (
           <Article
