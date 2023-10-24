@@ -2,6 +2,7 @@ import { style, globalStyle } from "@vanilla-extract/css";
 
 export const detailRoot = style({
   margin: "0 auto",
+  padding: "0 24px",
   maxWidth: "768px",
 });
 
@@ -12,7 +13,7 @@ export const detailBack = style({
   gap: "8px",
   fontSize: "14px",
   color: "#888",
-  marginBottom: "64px",
+  margin: "32px 0",
   width: "fit-content",
   transition: "color 0.15s ease",
 });
@@ -42,5 +43,3 @@ export const authors = style({
   padding: "0 48px 1rem 0",
   borderBottom: "1px solid hsla(0, 0%, 18%, 1)",
 });
-
-export const prose = style({});

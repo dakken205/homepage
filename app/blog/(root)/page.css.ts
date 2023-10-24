@@ -3,7 +3,7 @@ import { style, globalStyle } from "@vanilla-extract/css";
 export const blog = style({
   width: "100%",
   maxWidth: "1216px",
-  margin: "60px auto",
+  margin: "60px auto 60px",
   padding: "0 24px",
 });
 
@@ -61,6 +61,8 @@ export const title = style({
   lineHeight: "2rem",
   textAlign: "left",
   width: "fit-content",
+  minHeight: "4rem",
+  padding: "12px 0",
   transition: "color 0.2s ease",
 });
 
@@ -70,11 +72,23 @@ globalStyle(`${title}:hover`, {
 
 export const prose = style({
   color: "hsla(0,0%, 93%, 1)",
+  height: "8rem",
   fontSize: "0.9rem",
   fontWeight: "250",
   lineHeight: "1.5rem",
   textAlign: "left",
   marginTop: "12px",
+  overflow: "hidden",
+
+  backgroundColor: "initial !important",
+});
+
+globalStyle(`${prose} :not(p:nth-of-type(1), p:nth-of-type(2))`, {
+  display: "none",
+});
+
+globalStyle(`${prose} p:nth-of-type(1) > *, ${prose} p:nth-of-type(2) > *`, {
+  display: "block",
 });
 
 export const readMore = style({
@@ -94,5 +108,6 @@ export const readMore = style({
 
 globalStyle(`${readMore}:hover`, {
   color: "hsla(0,0%, 93% ,1)",
-  background: "hsla( 0,0%,12% ,1)",
+  background: "hsla(0,0%, 12%, 1)",
+  textDecoration: "none",
 });
