@@ -15,7 +15,7 @@ const ArticlesMetadata: ArticleMetadataType[] = [
   {
     path: "Python-for-Beginners/01_What-is-Object",
     author: Author.DaikiOkayama,
-    title: "What is Object?",
+    title: "Pythonのオブジェクト",
     date: new Date("2023-10-25"),
   },
   {
