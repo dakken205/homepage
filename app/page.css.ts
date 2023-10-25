@@ -35,13 +35,15 @@ globalStyle(`${introSubtitle} strong`, {
 });
 
 export const introButtons = style({
-  height: "64px",
+  display: "flex",
+  justifyContent: "center",
+  height: "48px",
 });
 
 export const introButtonBase = style({
-  display: "inline-flex",
-  height: "48px",
+  display: "flex",
   fontSize: "1rem",
+  width: "8rem",
   lineHeight: "1.5rem",
   borderRadius: "8px",
   fontWeight: "500",
@@ -50,6 +52,7 @@ export const introButtonBase = style({
   boxShadow: "0 0 0 1px transparent",
   maxWidth: "100%",
   alignItems: "center",
+  justifyContent: "center",
   transitionProperty: "border-color, background, color, transform, box-shadow",
   transitionDuration: ".15s",
   transitionTimingFunction: "ease",
