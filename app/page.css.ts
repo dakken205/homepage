@@ -100,7 +100,7 @@ export const departmentsTitle = style({
   marginBottom: "24px",
   textAlign: "center",
   fontSize: "32px",
-  lineHeight: "1.8",
+  lineHeight: "1.25",
   fontWeight: "700",
   color: "#fafafa",
 });
@@ -110,7 +110,7 @@ export const departmentsSubtitle = style({
   maxWidth: "930px",
   textAlign: "center",
   fontSize: "16px",
-  lineHeight: "1.25",
+  lineHeight: "1.7",
   fontWeight: "400",
   color: "#888",
 });
