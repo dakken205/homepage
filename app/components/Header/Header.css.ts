@@ -45,10 +45,10 @@ export const navbarLink = style({
 });
 
 export const current = style({
-  color: "#0070f3",
+  color: "#fff",
   selectors: {
     "&:hover": {
-      color: "#0070f3",
+      color: "#fff",
     },
   },
 });
