@@ -38,9 +38,9 @@ export default function Header() {
               }
             />
           </div>
-          <LinkButton href="/about" children={<>DA研について</>} />
-          <LinkButton href="/blog" children={<>ブログ</>} />
-          <LinkButton href="/contact" children={<>お問い合わせ</>} />
+          <LinkButton href="/about">DA研について</LinkButton>
+          <LinkButton href="/blog">ブログ</LinkButton>
+          <LinkButton href="/contact">お問い合わせ</LinkButton>
         </div>
       </nav>
     </header>

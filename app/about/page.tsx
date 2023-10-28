@@ -87,12 +87,9 @@ export default function About() {
         <div className={styles.results}>
           {results["results"].map((result, i) => {
             return (
-              <Result
-                date={result.date}
-                title={result.title}
-                children={result.content}
-                key={i}
-              ></Result>
+              <Result date={result.date} title={result.title} key={i}>
+                {result.content}
+              </Result>
             );
           })}
         </div>
