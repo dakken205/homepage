@@ -9,6 +9,36 @@ const fadeIn = keyframes({
   },
 });
 
+const backgroundRotation = keyframes({
+  "0%": {
+    backgroundPosition: "50% 0%",
+  },
+  "12.5%": {
+    backgroundPosition: "75% 25%",
+  },
+  "25%": {
+    backgroundPosition: "100% 50%",
+  },
+  "37.5%": {
+    backgroundPosition: "75% 75%",
+  },
+  "50%": {
+    backgroundPosition: "50% 100%",
+  },
+  "62.5%": {
+    backgroundPosition: "25% 75%",
+  },
+  "75%": {
+    backgroundPosition: "0% 50%",
+  },
+  "87.5%": {
+    backgroundPosition: "25% 25%",
+  },
+  "100%": {
+    backgroundPosition: "50% 0%",
+  },
+});
+
 export const aboutRoot = style({});
 
 export const visionRoot = style({
@@ -64,6 +94,13 @@ globalStyle(`${visionSignature} span`, {
   margin: "0 1rem",
   fontSize: "2rem",
   color: "#ededed",
+});
+
+export const backgroundGradient = style({
+  backgroundSize: "200% 200%",
+  backgroundImage:
+    "radial-gradient(farthest-corner at 0% 60%, #010630 0%, transparent 100%), radial-gradient(farthest-corner at 50% 10%, #300101 0%, transparent 100%), radial-gradient(farthest-corner at 80% 60%, #302D01 0%, transparent 100%)",
+  animation: `${backgroundRotation} 20s linear infinite`,
 });
 
 export const resultsRoot = style({
