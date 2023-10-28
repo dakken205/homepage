@@ -1,6 +1,7 @@
+import Link from "next/link";
+import Result from "@/app/components/Result";
 import { zen_kurenaido } from "@/app/font";
 import * as styles from "./page.css";
-import Result from "@/app/components/Result";
 import results from "./results.json";
 
 export default function About() {
@@ -29,6 +30,57 @@ export default function About() {
           </div>
         </section>
       </div>
+
+      <section className={styles.informationRoot}>
+        <h2 className={styles.informationTitle}>部活概要</h2>
+        <table className={styles.informationTable}>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <td>データ分析研究会</td>
+            </tr>
+            <tr>
+              <th>創設</th>
+              <td>2020年5月</td>
+            </tr>
+            <tr>
+              <th>部活動認定</th>
+              <td>2022年12月</td>
+            </tr>
+            <tr>
+              <th>創設者</th>
+              <td>新福一貴</td>
+            </tr>
+            <tr>
+              <th>活動場所</th>
+              <td>兵庫県立大学</td>
+            </tr>
+            <tr>
+              <th>活動日時</th>
+              <td>毎週木曜日 16:30~</td>
+            </tr>
+            <tr>
+              <th>活動内容</th>
+              <td>勉強会、コンペティション参加</td>
+            </tr>
+            <tr>
+              <th>部員数</th>
+              <td>約20名</td>
+            </tr>
+            <tr>
+              <th>部長</th>
+              <td>平野徳麻</td>
+            </tr>
+            <tr>
+              <th>顧問</th>
+              <td>
+                <Link href="https://researchmap.jp/msasa">笹嶋宗彦</Link>、
+                <Link href="https://researchmap.jp/ken_ishibashi">石橋健</Link>
+              </td>
+            </tr>
+          </thead>
+        </table>
+      </section>
 
       <section className={styles.resultsRoot}>
         <h2 className={styles.resultsTitle}>活動実績</h2>

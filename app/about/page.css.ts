@@ -153,3 +153,25 @@ export const resultItemTitle = style({
   lineHeight: "2.5rem",
   marginBottom: "15px",
 });
+
+export const informationRoot = resultsRoot;
+export const informationTitle = resultsTitle;
+
+export const informationTable = style({
+  width: "100%",
+  borderCollapse: "collapse",
+});
+
+globalStyle(`${informationTable} th`, {
+  color: "#ededed",
+  textAlign: "center",
+  padding: "12px",
+  borderBottom: "1px solid #333",
+});
+
+globalStyle(`${informationTable} td`, {
+  color: "#ededed",
+  textAlign: "left",
+  padding: "12px",
+  borderBottom: "1px solid #333",
+});
