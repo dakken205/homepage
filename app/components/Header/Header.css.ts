@@ -43,3 +43,12 @@ export const navbarLink = style({
     },
   },
 });
+
+export const current = style({
+  color: "#0070f3",
+  selectors: {
+    "&:hover": {
+      color: "#0070f3",
+    },
+  },
+});
