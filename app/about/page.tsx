@@ -1,5 +1,7 @@
 import { zen_kurenaido } from "@/app/font";
 import * as styles from "./page.css";
+import Result from "@/app/components/Result";
+import results from "./results.json";
 
 export default function About() {
   return (
@@ -21,6 +23,22 @@ export default function About() {
             データ分析研究会 部長
             <span className={zen_kurenaido.className}>平野徳麻</span>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.resultsRoot}>
+        <h2 className={styles.resultsTitle}>活動実績</h2>
+        <div className={styles.results}>
+          {results["results"].map((result, i) => {
+            return (
+              <Result
+                date={result.date}
+                title={result.title}
+                children={result.content}
+                key={i}
+              ></Result>
+            );
+          })}
         </div>
       </section>
     </div>
