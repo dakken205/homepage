@@ -31,12 +31,9 @@ export default function Header() {
       <nav className={styles.navbar}>
         <div className={styles.navbarLinks}>
           <div className={styles.stack}>
-            <LinkButton
-              href="/"
-              children={
-                <Image src="/logo.png" alt="" width={100} height={40} />
-              }
-            />
+            <LinkButton href="/">
+              <Image src="/logo.png" alt="" width={100} height={40} />
+            </LinkButton>
           </div>
           <LinkButton href="/about">DA研について</LinkButton>
           <LinkButton href="/blog">ブログ</LinkButton>
