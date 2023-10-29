@@ -7,8 +7,7 @@ export default function ContactLayout({
 }) {
   return (
     <div className={styles.contact}>
-      <h1 className={styles.contactTitle}>Contact</h1>
-      <p className={styles.contactSubtitle}>お問い合わせ</p>
+      <h1 className={styles.contactTitle}>お問い合わせ</h1>
       {children}
     </div>
   );

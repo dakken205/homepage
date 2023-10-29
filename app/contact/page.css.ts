@@ -1,7 +1,7 @@
 import { style, globalStyle } from "@vanilla-extract/css";
 
 export const contact = style({
-  padding: "0 80px 110px",
+  padding: "0 80px 40px",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -9,8 +9,8 @@ export const contact = style({
 });
 
 export const contactTitle = style({
-  marginTop: "70px",
-  fontSize: "64px",
+  marginTop: "60px",
+  fontSize: "clamp(32px, 5vw, 48px)",
 });
 
 export const contactSubtitle = style({
