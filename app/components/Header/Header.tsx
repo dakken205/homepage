@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as styles from "./Header.css";
 
 export default function Header() {
@@ -16,6 +16,10 @@ export default function Header() {
     children: React.ReactNode;
   };
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   const LinkButton = ({ href, children }: LinkButtonProps) => {
     return (
       <Link
@@ -24,7 +28,9 @@ export default function Header() {
         } `}
         href={href}
         onClick={() => {
-          setIsMenuOpen(false);
+          // Note: Due to page flicker issues, only transitions to the same page
+          // should be handled by onClick. Transitions to other pages are handled by useEffect.
+          if (href == pathname) setIsMenuOpen(false);
         }}
       >
         {children}
