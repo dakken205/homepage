@@ -5,9 +5,7 @@ import remarkGfm from "remark-gfm";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["mdx", "ts", "tsx"],
-  experimental: {
-    serverActions: true,
-  },
+  experimental: {},
 };
 
 const withVanillaExtract = createVanillaExtractPlugin();
