@@ -1,9 +1,6 @@
 "use client";
 
-// ts-ignore because experimental_useFormStatus is not in the types
-// See https://github.com/vercel/next.js/issues/49232
-// @ts-ignore
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 import { useEffect, useState } from "react";
 import * as styles from "../contact/page.css";
 
