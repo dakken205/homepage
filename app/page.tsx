@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <div className={styles.homeRoot}>
       <main className={styles.introRoot}>
+        <div className={styles.introHeader}></div>
         <h1 className={`${styles.introTitle} ${styles.textGradient}`}>
           DA研HPへようこそ!
         </h1>
