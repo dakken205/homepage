@@ -9,6 +9,7 @@ export const contact = style({
 });
 
 export const contactTitle = style({
+  color: "#f5f5f5",
   marginTop: "60px",
   fontSize: "clamp(32px, 5vw, 48px)",
 });
