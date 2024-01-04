@@ -13,22 +13,14 @@ export const introRoot = style({
   minHeight: "500px",
   maxWidth: "calc(1234px + 56px * 2)",
   textAlign: "center",
-  margin: "clamp(20px, 5rem, 80px) auto clamp(20px, 7rem, 120px)",
+  margin: "0 auto clamp(20px, 7rem, 120px)",
   padding: "0 24px",
   overflow: "hidden",
   isolation: "isolate",
 });
 
 export const introHeader = style({
-  padding: "32px 0",
-  "@media": {
-    "screen and (max-width: 768px)": {
-      padding: "16px 0",
-    },
-    "screen and (max-width: 480px)": {
-      padding: "0px 0",
-    },
-  },
+  height: "clamp(20px, 5rem, 80px)",
 });
 
 export const introTitle = style({
