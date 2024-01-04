@@ -45,7 +45,13 @@ export default function Header() {
 
   return (
     <>
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        style={{
+          position: isMenuOpen ? "fixed" : "sticky",
+          background: isMenuOpen ? "inherit" : "",
+        }}
+      >
         <nav className={styles.navbar}>
           <div className={styles.navbarLinks}>
             <div className={styles.stack}>
