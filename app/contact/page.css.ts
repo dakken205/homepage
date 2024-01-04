@@ -1,4 +1,5 @@
 import { style, globalStyle } from "@vanilla-extract/css";
+import { vars } from "@/app/theme.css";
 
 export const contact = style({
   padding: "0 80px 40px",
@@ -9,7 +10,6 @@ export const contact = style({
 });
 
 export const contactTitle = style({
-  color: "#f5f5f5",
   marginTop: "60px",
   fontSize: "clamp(32px, 5vw, 48px)",
 });
@@ -45,7 +45,7 @@ export const stack = style({
 export const label = style({
   display: "block",
   fontSize: "13px",
-  color: "hsla(0,0% ,63% ,1)",
+  color: vars.ds.gray[900],
   marginBottom: "8px",
   cursor: "text",
 });
@@ -58,8 +58,8 @@ export const input = style({
   borderRadius: "6px",
   border: "none",
   padding: "6px 12px",
-  background: "#0a0a0a",
-  color: "#fff",
+  background: vars.ds.gray[100],
+  color: vars.geist.foreground,
   lineHeight: "normal",
   order: "1",
   outline: "none",
@@ -83,24 +83,24 @@ export const textarea = style({
     zIndex: "10",
   },
   "::-webkit-scrollbar-track": {
-    background: "hsla(0,0%, 10% ,1)",
+    background: vars.ds.gray[300],
     borderRadius: "6px",
   },
   "::-webkit-scrollbar-thumb": {
-    background: "hsla(0,0%, 20% ,1)",
+    background: vars.ds.gray[500],
     borderRadius: "6px",
   },
 });
 
 globalStyle(`${textarea}::-webkit-scrollbar-thumb:hover`, {
-  background: "hsla(0,0%, 30% ,1)",
+  background: vars.ds.gray[700],
 });
 
 export const button = style({
   height: "40px",
   width: "164px",
-  background: "hsla(0,0%, 10% ,1)",
-  color: "hsla(0,0%, 56% ,1)",
+  background: vars.ds.gray[100],
+  color: vars.ds.gray[700],
   borderRadius: "6px",
   fontSize: "0.875rem",
   fontWeight: "500",
@@ -116,7 +116,7 @@ export const button = style({
   cursor: "pointer",
   selectors: {
     "&:hover": {
-      background: "hsla(0,0%, 20% ,1)",
+      background: vars.ds.gray[300],
       boxShadow: "0 0 0 1px hsla(0,0%, 63% ,1)",
     },
     "&:focus": {
@@ -128,7 +128,7 @@ export const button = style({
 
 export const privacyText = style({
   textAlign: "center",
-  color: "hsla(0,0%, 63% ,1)",
+  color: vars.ds.gray[600],
   fontSize: "0.875rem",
   letterSpacing: "initial",
   fontWeight: "400",
@@ -136,5 +136,5 @@ export const privacyText = style({
 });
 
 globalStyle(`${privacyText} a`, {
-  color: "hsla(0,0%, 80% ,1)",
+  color: vars.ds.gray[900],
 });

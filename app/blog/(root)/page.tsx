@@ -5,7 +5,9 @@ import * as styles from "./page.css";
 export default function Blog() {
   return (
     <div className={styles.blogRoot}>
-      <h1 className={styles.text}>DakkensIO</h1>
+      <h1 className={styles.blogTitle}>
+        <span>DA</span>研の技術ブログ
+      </h1>
       <div className={styles.posts}>
         {metadata.map((article, i) => (
           <Article

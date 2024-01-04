@@ -1,4 +1,5 @@
 import { style, globalStyle, keyframes } from "@vanilla-extract/css";
+import { vars } from "@/app/theme.css";
 
 const fadeIn = keyframes({
   "0%": {
@@ -51,6 +52,7 @@ export const visionRoot = style({
   padding: "48px 12px",
   gap: "16px",
   borderBottom: "1px solid #333",
+  color: "#ededed",
 });
 
 export const eyebrow = style({
@@ -66,7 +68,6 @@ export const visionTitle = style({
   fontWeight: "700",
   fontSize: "2.5rem",
   marginBottom: "1.5rem",
-  color: "#ededed",
 });
 
 export const visionText = style({
@@ -80,7 +81,6 @@ export const visionText = style({
 globalStyle(`${visionText} p`, {
   fontSize: "1rem",
   lineHeight: "2rem",
-  color: "#ededed",
 });
 
 export const visionSignature = style({
@@ -93,7 +93,6 @@ export const visionSignature = style({
 globalStyle(`${visionSignature} span`, {
   margin: "0 1rem",
   fontSize: "2rem",
-  color: "#ededed",
 });
 
 export const backgroundGradient = style({
@@ -103,19 +102,22 @@ export const backgroundGradient = style({
   animation: `${backgroundRotation} 20s linear infinite`,
 });
 
+// Results Part
+
 export const resultsRoot = style({
   maxWidth: "812px",
   margin: "0 auto",
   padding: "48px 24px",
+  color: vars.geist.foreground,
 });
 
 export const resultsTitle = style({
-  color: "#ededed",
+  color: vars.accents[7],
   margin: "40px 0",
 });
 
 export const results = style({
-  borderLeft: "1px solid #333",
+  borderLeft: `1px solid ${vars.accents[2]}`,
   paddingLeft: "43px",
   "@media": {
     "screen and (max-width: 768px)": {
@@ -131,23 +133,23 @@ export const resultItem = style({
   paddingBottom: "56px",
   gap: "12px",
   opacity: 0,
-  color: "#ededed",
+  color: vars.accents[5],
   animation: `${fadeIn} .3s ease-in-out forwards`,
   "@media": {
     "screen and (max-width: 768px)": {
-      borderBottom: "1px solid #333",
+      borderBottom: `1px solid ${vars.accents[2]}`,
       marginBottom: "24px",
     },
   },
 });
 
 export const resultItemDate = style({
-  color: "#888888",
+  color: vars.accents[5],
   fontSize: "14px",
 });
 
 export const resultItemTitle = style({
-  color: "#ededed",
+  color: vars.accents[5],
   fontSize: "1.8rem",
   fontWeight: "700",
   lineHeight: "2.5rem",
@@ -163,15 +165,15 @@ export const informationTable = style({
 });
 
 globalStyle(`${informationTable} th`, {
-  color: "#ededed",
+  color: vars.accents[5],
   textAlign: "center",
   padding: "12px",
-  borderBottom: "1px solid #333",
+  borderBottom: `1px solid ${vars.accents[2]}`,
 });
 
 globalStyle(`${informationTable} td`, {
-  color: "#ededed",
+  color: vars.accents[5],
   textAlign: "left",
   padding: "12px",
-  borderBottom: "1px solid #333",
+  borderBottom: `1px solid ${vars.accents[2]}`,
 });

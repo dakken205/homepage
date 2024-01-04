@@ -1,4 +1,5 @@
 import { style, globalStyle } from "@vanilla-extract/css";
+import { vars } from "@/app/theme.css";
 
 export const blog = style({
   width: "100%",
@@ -9,16 +10,18 @@ export const blog = style({
 
 export const blogRoot = style({
   width: "100%",
-  color: "hsla(0,0%, 93% ,1)",
   textAlign: "center",
 });
 
-export const text = style({
-  color: "hsla(0,0%, 93% ,1)",
+export const blogTitle = style({
   fontSize: "2rem",
-  fontWeight: "700",
+  fontWeight: "550",
   lineHeight: "2.5rem",
   textAlign: "left",
+});
+
+globalStyle(`${blogTitle} span`, {
+  fontWeight: 650,
 });
 
 export const posts = style({
@@ -35,8 +38,8 @@ export const post = style({
   flexDirection: "column",
   padding: "12px",
   borderRadius: "12px",
-  boxShadow:
-    "0 0 0 1px hsla(0, 0%, 100%, .145) ,0px 1px 2px rgba(0, 0, 0, .16)",
+  boxShadow: `0 0 0 1px ${vars.ds.gray[200]},
+              0px 1px 2px ${vars.ds.gray[300]}`,
 });
 
 export const stack = style({
@@ -47,7 +50,7 @@ export const stack = style({
 });
 
 export const date = style({
-  color: "hsla(0,0%, 63%, 1)",
+  color: vars.ds.gray[900],
   fontSize: "0.875rem",
   lineHeight: "1.5rem",
   fontWeight: "400",
@@ -55,9 +58,8 @@ export const date = style({
 });
 
 export const title = style({
-  color: "hsla(0,0%, 93%, 1)",
   fontSize: "1.25rem",
-  fontWeight: "600",
+  fontWeight: "550",
   lineHeight: "2rem",
   textAlign: "left",
   width: "fit-content",
@@ -67,20 +69,23 @@ export const title = style({
 });
 
 globalStyle(`${title}:hover`, {
-  color: "hsla(0,0%, 100%, 1)",
+  color: vars.geist.foreground,
 });
 
 export const prose = style({
-  color: "hsla(0,0%, 93%, 1)",
   height: "8rem",
-  fontSize: "0.9rem",
-  fontWeight: "250",
+  fontSize: "1rem",
+  fontWeight: "400",
   lineHeight: "1.5rem",
   textAlign: "left",
   marginTop: "12px",
   overflow: "hidden",
-
   backgroundColor: "initial !important",
+  "@media": {
+    "(prefers-color-scheme: dark)": {
+      fontWeight: "250",
+    },
+  },
 });
 
 globalStyle(`${prose} :not(p:nth-of-type(1), p:nth-of-type(2))`, {
@@ -94,9 +99,9 @@ globalStyle(`${prose} p:nth-of-type(1) > *, ${prose} p:nth-of-type(2) > *`, {
 export const readMore = style({
   display: "flex",
   justifyContent: "center",
+  color: vars.ds.gray[900],
+  background: vars.ds.gray[100],
   height: "36px",
-  background: "hsla(0,0%, 10% ,1)",
-  color: "hsla(0,0%, 63% ,1)",
   fontSize: "14px",
   fontWeight: "500",
   alignItems: "center",
@@ -107,7 +112,7 @@ export const readMore = style({
 });
 
 globalStyle(`${readMore}:hover`, {
-  color: "hsla(0,0%, 93% ,1)",
-  background: "hsla(0,0%, 12%, 1)",
+  color: vars.ds.gray[1000],
+  background: vars.ds.gray[200],
   textDecoration: "none",
 });

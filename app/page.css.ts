@@ -1,7 +1,8 @@
 import { style, globalStyle } from "@vanilla-extract/css";
+import { vars } from "./theme.css";
 
 export const textGradient = style({
-  background: "linear-gradient(180deg, #fff, #adadad)",
+  background: vars.text.gradient,
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
 });
@@ -31,7 +32,7 @@ export const introTitle = style({
 });
 
 export const introSubtitle = style({
-  color: "#888",
+  color: vars.accents[5],
   fontSize: "max(15px, min(2vw, 20px))",
   lineHeight: "1.8",
   fontWeight: "400",
@@ -39,8 +40,8 @@ export const introSubtitle = style({
 });
 
 globalStyle(`${introSubtitle} strong`, {
+  color: vars.accents[8],
   fontWeight: "500",
-  color: "#fafafa",
 });
 
 export const introButtons = style({
@@ -71,39 +72,34 @@ export const introButtonBase = style({
 });
 
 export const introWhiteButton = style({
-  backgroundColor: "#fff",
-  color: "#000",
+  backgroundColor: vars.geist.foreground,
+  color: vars.geist.background,
   selectors: {
     "&:hover": {
-      backgroundColor: "#ededed",
+      backgroundColor: vars.accents[7],
     },
   },
 });
 
 export const introBlackButton = style({
-  backgroundColor: "#000",
-  color: "#fff",
-  border: "1px solid hsla(0,0%, 100%, .14)",
+  backgroundColor: vars.geist.background,
+  color: vars.geist.foreground,
+  border: `1px solid ${vars.accents[2]}`,
   selectors: {
     "&:hover": {
-      backgroundColor: "#0a0a0a",
+      backgroundColor: vars.accents[1],
     },
   },
 });
 
-export const visionRoot = style({
-  maxWidth: "1200px",
-  margin: "0 auto",
-  padding: "0 16px 96px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  textAlign: "center",
-});
+// Department Part
 
 export const departmentsRoot = style({
-  background: "linear-gradient(180deg, #000 30%, #111 50%, #111 100%)",
-  borderBottom: "1px solid #333",
+  background: `linear-gradient(180deg,
+                               ${vars.geist.background} 30%,
+                               ${vars.accents[1]} 50%,
+                               ${vars.accents[1]} 100%)`,
+  borderBottom: `1px solid ${vars.accents[2]}`,
   padding: "0 16px 96px",
 });
 
@@ -150,7 +146,8 @@ export const activityCard = style({
   justifyContent: "flex-end",
   padding: "24px",
   borderRadius: "12px",
-  border: "1px solid #333",
+  border: `1px solid ${vars.accents[2]}`,
+
   transitionProperty: "border-color, background",
   transitionDuration: ".15s",
 });
@@ -161,23 +158,27 @@ export const activityCardMini = style({
   justifyContent: "flex-start",
   padding: "24px",
   borderRadius: "12px",
-  border: "1px solid #333",
+  border: `1px solid ${vars.accents[2]}`,
   transitionProperty: "border-color, background",
   transitionDuration: ".15s",
 });
 
 export const activityCardTitle = style({
   fontSize: "20px",
-  fontWeight: "600",
+  fontWeight: "500",
   lineHeight: "32px",
-  color: "#fff",
+  color: vars.geist.foreground,
 });
 
 export const activityCardSubtitle = style({
   fontSize: "14px",
   lineHeight: "1.5",
-  color: "#888",
+  color: vars.accents[5],
 });
+
+// Department Part End
+
+// Features Part
 
 export const featuresRoot = style({
   maxWidth: "1200px",
@@ -192,13 +193,17 @@ export const featuresTitle = style({
 });
 
 export const features = style({
+  color: vars.accents[5],
   margin: "48px 0",
-  color: "#888",
 });
 
 globalStyle(`${features} li`, {
   margin: "5px 0",
 });
+
+// Features Part End
+
+// Promotion Part
 
 export const promotionRoot = style({
   maxWidth: "1500px",
@@ -216,7 +221,6 @@ export const promotionTitle = style({
   fontSize: "32px",
   lineHeight: "1.25",
   fontWeight: "700",
-  color: "#fafafa",
 });
 
 export const promotions = style({
@@ -228,9 +232,9 @@ export const promotions = style({
     "&::before": {
       content: "",
       position: "absolute",
-      width: "100%",
+      width: "100vw",
       height: "100%",
-      background: "linear-gradient(transparent 0%, #000 120%)",
+      background: `linear-gradient(transparent 0%, ${vars.geist.background} 120%)`,
       zIndex: "2",
     },
   },
@@ -247,3 +251,5 @@ export const promotionCard = style({
   borderRadius: "6px",
   overflow: "hidden",
 });
+
+// Promotion Part End

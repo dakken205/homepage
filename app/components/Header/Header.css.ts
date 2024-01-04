@@ -1,4 +1,5 @@
 import { style, keyframes } from "@vanilla-extract/css";
+import { vars } from "@/app/theme.css";
 
 const crossDown = keyframes({
   "0%": { transform: "rotate(0deg) translate(0px, 0px)" },
@@ -31,7 +32,7 @@ export const header = style({
   zIndex: "1000",
   padding: "0 24px",
   height: "64px",
-  boxShadow: "inset 0 -1px 0 0 #333",
+  boxShadow: `inset 0 -1px 0 0 ${vars.accents[2]}`,
   backdropFilter: "saturate(180%) blur(5px)",
 });
 
@@ -52,14 +53,14 @@ export const navbarLinks = style({
   alignItems: "center",
   gap: "24px",
   fontSize: "14px",
-  color: "#888",
+  color: vars.accents[5],
 });
 
 export const navbarLink = style({
   transition: "color 0.15s ease",
   selectors: {
     "&:hover": {
-      color: "#fff",
+      color: vars.geist.foreground,
     },
   },
 });
@@ -69,7 +70,6 @@ export const navbarTextLinks = style({
   alignItems: "center",
   gap: "24px",
   fontSize: "14px",
-  color: "#888",
   "@media": {
     "screen and (max-width: 748px)": {
       display: "none",
@@ -102,13 +102,13 @@ export const menuToggle = style({
   selectors: {
     "&::before": {
       content: " ",
-      backgroundColor: "#fff",
+      backgroundColor: vars.geist.foreground,
       height: "1.5px",
       width: "22px",
     },
     "&::after": {
       content: " ",
-      backgroundColor: "#fff",
+      backgroundColor: vars.geist.foreground,
       height: "1.5px",
       width: "22px",
     },
@@ -142,10 +142,10 @@ export const menuToggleClose = style({
 });
 
 export const current = style({
-  color: "#fff",
+  color: vars.geist.foreground,
   selectors: {
     "&:hover": {
-      color: "#fff",
+      color: vars.geist.foreground,
     },
   },
 });
@@ -153,7 +153,7 @@ export const current = style({
 export const menu = style({
   position: "fixed",
   top: "64px",
-  backgroundColor: "#000",
+  backgroundColor: vars.geist.background,
   display: "flex",
   flexDirection: "column",
   width: "100%",

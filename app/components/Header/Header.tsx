@@ -50,12 +50,18 @@ export default function Header() {
           <div className={styles.navbarLinks}>
             <div className={styles.stack}>
               <LinkButton href="/">
-                <Image
-                  src="/logo-white.png"
-                  alt="DA研ロゴ"
-                  width={100}
-                  height={40}
-                />
+                <picture>
+                  <source
+                    srcSet="/logo-black.png"
+                    media="(prefers-color-scheme: light)"
+                  />
+                  <Image
+                    src="/logo-white.png"
+                    alt="DA研ロゴ"
+                    width={100}
+                    height={40}
+                  />
+                </picture>
               </LinkButton>
             </div>
             <div className={styles.navbarTextLinks}>
