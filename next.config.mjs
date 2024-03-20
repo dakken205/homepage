@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["mdx", "ts", "tsx"],
+  output: "export",
   experimental: {},
 };
 
