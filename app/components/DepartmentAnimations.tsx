@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import * as styles from "./DepartmentAnimations.css";
 
-export const DataScienceAnimation = () => {
+function useAnimation() {
   const [isPerspective, setIsPerspective] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -24,6 +24,13 @@ export const DataScienceAnimation = () => {
       observer.disconnect();
     };
   }, []);
+
+  return { ref, isPerspective };
+}
+
+export const DataScienceAnimation = () => {
+  const { ref, isPerspective } = useAnimation();
+
   return (
     <div ref={ref} style={{ position: "relative" }}>
       <svg
@@ -58,12 +65,55 @@ export const DataScienceAnimation = () => {
 };
 
 export const BusinessAnimation = () => {
+  const { ref, isPerspective } = useAnimation();
+
   return (
-    <svg className={styles._stub}>
-      <text y="10%" x="0" fill="#8e8e8e">
-        Business Animation(Comming Soon)
-      </text>
-    </svg>
+    <div ref={ref} style={{ position: "relative" }}>
+      <svg
+        className={isPerspective ? styles.flush : ""}
+        style={{ position: "absolute" }}
+      >
+        <rect
+          x="45%"
+          y="10%"
+          width="6%"
+          height="10%"
+          fill="#eee"
+          rx="1"
+          ry="1"
+          style={{
+            rotate: "10deg",
+          }}
+        />
+        <circle cx="47.5%" cy="17%" r="8%" fill="#eee" />
+      </svg>
+      <svg>
+        <circle cx="25%" cy="30%" r="12%" stroke="#fff" strokeWidth="5%" />
+        <rect x="22.5%" y="50%" width="4%" height="30%" fill="#fff" />
+        <rect
+          x="28%"
+          y="50%"
+          width="20%"
+          height="5%"
+          fill="#fff"
+          rx="3"
+          ry="3"
+          style={{ transform: "rotate(10deg)" }}
+          className={isPerspective ? styles.rightHand : ""}
+        />
+        <rect
+          x="22%"
+          y="60%"
+          width="15%"
+          height="5%"
+          fill="#fff"
+          rx="3"
+          ry="3"
+          style={{ transform: "rotate(-7deg)" }}
+          className={isPerspective ? styles.leftHand : ""}
+        />
+      </svg>
+    </div>
   );
 };
 
