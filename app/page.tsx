@@ -51,7 +51,7 @@ export default function Home() {
             >
               「データサイエンティストに求められるスキルセット」
             </Link>
-            に基づき、以下の3つの部門に分かれて活動しています。
+            に基づき、以下の4つの部門に分かれて活動しています。
           </p>
           <div className={styles.departmentsGrid}>
             <Link href="/department/biz" className={styles.activityCard}>
@@ -81,10 +81,19 @@ export default function Home() {
                 データサイエンスを意味のある形に使えるようにし、実装、運用する。
               </div>
             </Link>
+            <Link href="/department/cc" className={styles.activityCard}>
+              <DataEngineeringAnimation />
+              <div className={styles.activityCardTitle}>
+                CC部門 / Content Create
+              </div>
+              <div className={styles.activityCardSubtitle}>
+                コンテンツを、クリエイトする
+              </div>
+            </Link>
             <ActivityCardMini
-              href="/department/biz#cambria"
-              title="カンブリア宮殿の同時視聴"
-              subTitle="日経スペシャル カンブリア宮殿を毎週視聴します。視聴の後は、ビジネスの視点からディスカッションを行います。"
+              href="/department/biz#book-review-presentation"
+              title="書評プレゼン"
+              subTitle="書評とは、「本にツッコミを入れていく試行作業」です。本を読む人は良いアウトプットの場に、読まない人も良い読書週間のきっかけにしましょう。本読もうぜ！"
             />
             <ActivityCardMini
               href="/department/ds#machine-coder"
@@ -97,9 +106,14 @@ export default function Home() {
               subTitle="AtCoderをはじめ、数多くのプログラミングコンテストに参加します。論理思考や問題解決能力を養う上で非常に有益であると考えます。"
             />
             <ActivityCardMini
-              href="/department/biz#promotion"
-              title="販促コンペ"
-              subTitle=""
+              href="/department/cc#movie"
+              title="CCの活動その1"
+              subTitle="CCの活動その1"
+            />
+            <ActivityCardMini
+              href="/department/biz#business-contest"
+              title="ビジコン / ビジネスコンテスト"
+              subTitle="チームでアイデアを練り上げ、プレゼンテーションを行うことでビジネスプランを競います。ビジネスの実践的なスキルを磨き、創造力を発揮する絶好の機会です。目指せ学生賞！金稼ごうぜ！"
             />
             <ActivityCardMini
               href="/department/ds#kaggle"
@@ -109,7 +123,12 @@ export default function Home() {
             <ActivityCardMini
               href="/department/de#develop"
               title="Webアプリ開発"
-              subTitle="多くの人に感動を与えるアプリを作りましょう。"
+              subTitle="プログラミングを通じて、データサイエンスの成果を可視化し、社会に還元する。"
+            />
+            <ActivityCardMini
+              href="/department/cc#"
+              title="CCの活動その2"
+              subTitle="CCの活動その2"
             />
           </div>
         </div>
