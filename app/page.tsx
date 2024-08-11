@@ -87,7 +87,7 @@ export default function Home() {
                 CC部門 / Content Create
               </div>
               <div className={styles.activityCardSubtitle}>
-                コンテンツを、クリエイトする
+                データサイエンスの成果を様々な形で表現する。
               </div>
             </Link>
             <ActivityCardMini
@@ -102,17 +102,17 @@ export default function Home() {
             />
             <ActivityCardMini
               href="/department/de#algorithm"
-              title="AtCoder / アルゴリズム勉強会"
+              title="AtCoder"
               subTitle="AtCoderをはじめ、数多くのプログラミングコンテストに参加します。論理思考や問題解決能力を養う上で非常に有益であると考えます。"
             />
             <ActivityCardMini
               href="/department/cc#movie"
-              title="CCの活動その1"
-              subTitle="CCの活動その1"
+              title="動画作成"
+              subTitle="表現方法の基礎。色彩や形、3D空間のイロハを把握し実践する。"
             />
             <ActivityCardMini
               href="/department/biz#business-contest"
-              title="ビジコン / ビジネスコンテスト"
+              title="ビジコン"
               subTitle="チームでアイデアを練り上げ、プレゼンテーションを行うことでビジネスプランを競います。ビジネスの実践的なスキルを磨き、創造力を発揮する絶好の機会です。目指せ学生賞！金稼ごうぜ！"
             />
             <ActivityCardMini
@@ -126,9 +126,9 @@ export default function Home() {
               subTitle="プログラミングを通じて、データサイエンスの成果を可視化し、社会に還元する。"
             />
             <ActivityCardMini
-              href="/department/cc#"
-              title="CCの活動その2"
-              subTitle="CCの活動その2"
+              href="/department/cc#cg"
+              title="CG作成"
+              subTitle="レイトレーシングやボリュームレンダリング等を学び再現する。"
             />
           </div>
         </div>
