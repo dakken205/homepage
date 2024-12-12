@@ -6,7 +6,9 @@ export default function Footer() {
       <div className={styles.wrapper}>
         <div className={styles.footerGrid}></div>
         <div className={styles.stack}>
-          <p className={styles.copyright}>© 2023 データ分析研究会</p>
+          <p className={styles.copyright}>
+            © {new Date().getFullYear()} データ分析研究会
+          </p>
           <div className={styles.socials}>
             <a
               href="https://github.com/dakken205"
