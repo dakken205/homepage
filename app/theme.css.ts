@@ -44,44 +44,44 @@ export const vars = createGlobalThemeContract({
 
 export const theme = globalStyle(":root", {
   "@media": {
-    "screen and (prefers-color-scheme: light)": {
-      vars: assignVars(vars, {
-        geist: {
-          foreground: "#000",
-          background: "#fff",
-        },
-        text: {
-          color: "#171717",
-          gradient: "linear-gradient(180deg, #555, #000)",
-        },
-        hovered: { backgroundColor: "#ededed" },
-        accents: {
-          1: "#fafafa",
-          2: "#eaeaea",
-          3: "#999",
-          4: "#888",
-          5: "#666",
-          6: "#444",
-          7: "#333",
-          8: "#111",
-        },
-        ds: {
-          gray: {
-            100: "hsl(0, 0%, 95%)",
-            200: "hsl(0, 0%, 92%)",
-            300: "hsl(0, 0%, 90%)",
-            400: "hsl(0, 0%, 92%)",
-            500: "hsl(0, 0%, 79%)",
-            600: "hsl(0, 0%, 66%)",
-            700: "hsl(0, 0%, 56%)",
-            800: "hsl(0, 0%, 49%)",
-            900: "hsl(0, 0%, 39%)",
-            1000: "hsl(0, 0%, 9%)",
-          },
-        },
-      }),
-    },
-    "screen and (prefers-color-scheme: dark)": {
+    // "screen and (prefers-color-scheme: light)": {
+    //   vars: assignVars(vars, {
+    //     geist: {
+    //       foreground: "#000",
+    //       background: "#fff",
+    //     },
+    //     text: {
+    //       color: "#171717",
+    //       gradient: "linear-gradient(180deg, #555, #000)",
+    //     },
+    //     hovered: { backgroundColor: "#ededed" },
+    //     accents: {
+    //       1: "#fafafa",
+    //       2: "#eaeaea",
+    //       3: "#999",
+    //       4: "#888",
+    //       5: "#666",
+    //       6: "#444",
+    //       7: "#333",
+    //       8: "#111",
+    //     },
+    //     ds: {
+    //       gray: {
+    //         100: "hsl(0, 0%, 95%)",
+    //         200: "hsl(0, 0%, 92%)",
+    //         300: "hsl(0, 0%, 90%)",
+    //         400: "hsl(0, 0%, 92%)",
+    //         500: "hsl(0, 0%, 79%)",
+    //         600: "hsl(0, 0%, 66%)",
+    //         700: "hsl(0, 0%, 56%)",
+    //         800: "hsl(0, 0%, 49%)",
+    //         900: "hsl(0, 0%, 39%)",
+    //         1000: "hsl(0, 0%, 9%)",
+    //       },
+    //     },
+    //   }),
+    // },
+    screen: {
       vars: assignVars(vars, {
         geist: {
           foreground: "#fff",

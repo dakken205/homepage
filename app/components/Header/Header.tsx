@@ -58,8 +58,8 @@ export default function Header() {
               <LinkButton href="/">
                 <picture>
                   <source
-                    srcSet="/logo-black.png"
-                    media="(prefers-color-scheme: light)"
+                  // srcSet="/logo-black.png"
+                  // media="(prefers-color-scheme: light)"
                   />
                   <Image
                     src="/logo-white.png"
