@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import SubmitButton from "../components/submitButton";
-import sendGmail from "../../services/sendGmail";
 import * as styles from "./page.css";
 
 export default function Contact() {
@@ -13,7 +12,18 @@ export default function Contact() {
       email: formData.get("email")?.toString() ?? "",
       content: formData.get("content")?.toString() ?? "",
     };
-    const res = await sendGmail(data);
+
+    const host =
+      process.env.NODE_ENV === "development"
+        ? "https://www.uoh-dakken.com"
+        : "http://localhost:3000";
+    const res = await fetch(new URL("/api/contact", host).toString(), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
     if (res.ok) {
       redirect("/contact/success");
