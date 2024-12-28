@@ -1,6 +1,48 @@
 export async function POST(req: Request) {
   const formData = await req.json();
-  const { name, email, content } = formData;
+  const { name, email, content, token } = formData;
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+
+  // reCAPTCHA
+
+  if (!token) {
+    return Response.json(
+      { error: "reCAPTCHA token is missing" },
+      { status: 400 }
+    );
+  }
+
+  if (!secret) {
+    return Response.json(
+      { error: "reCAPTCHA secret key is not set" },
+      { status: 500 }
+    );
+  }
+
+  const body = new URLSearchParams({
+    secret: secret as string,
+    response: token,
+  }).toString();
+
+  const recaptchaRes = await fetch(
+    "https://www.google.com/recaptcha/api/siteverify",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: body,
+    }
+  );
+
+  const recaptchaReport = await recaptchaRes.json();
+  if (!recaptchaReport.success) {
+    return Response.json(
+      { error: "reCAPTCHA verification failed" },
+      { status: 400 }
+    );
+  }
+
   if (!name || !email || !content) {
     return Response.json({ error: "Invalid form data" }, { status: 400 });
   }
