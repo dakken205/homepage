@@ -68,6 +68,8 @@ export const visionTitle = style({
   fontWeight: "700",
   fontSize: "2.5rem",
   marginBottom: "1.5rem",
+  whiteSpace: 'pre-wrap',
+  wordBreak: 'keep-all',
 });
 
 export const visionText = style({
@@ -84,7 +86,6 @@ globalStyle(`${visionText} p`, {
 });
 
 export const visionSignature = style({
-  display: "block",
   maxWidth: "1000px",
   marginTop: "3rem",
   flexDirection: "row",
@@ -97,6 +98,7 @@ globalStyle(`${visionSignature} span`, {
   '@media': {
     'screen and (max-width: 500px)': {
       display: 'block',
+      margin:0,
     },
   },
 });

@@ -1,10 +1,6 @@
 import { style, globalStyle } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
-globalStyle('p', {
-  whiteSpace: 'pre-wrap',
-  wordBreak: 'keep-all',
-});
 
 export const textGradient = style({
   background: vars.text.gradient,
@@ -34,6 +30,8 @@ export const introTitle = style({
   fontSize: "max(48px, min(5vw, 76px))",
   lineHeight: "1",
   padding: "24px",
+  whiteSpace: 'pre-wrap',
+  wordBreak: 'keep-all',
 });
 
 export const introSubtitle = style({

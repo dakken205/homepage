@@ -11,7 +11,7 @@ export default function About() {
         <section className={styles.visionRoot}>
           <p className={styles.eyebrow}>活動理念</p>
           <h2 className={styles.visionTitle}>
-            データサイエンスのセミプロ集団へ
+            データサイエンスの<wbr />セミプロ集団へ
           </h2>
           <div className={styles.visionText}>
             <p>
