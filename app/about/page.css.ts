@@ -84,6 +84,7 @@ globalStyle(`${visionText} p`, {
 });
 
 export const visionSignature = style({
+  display: "block",
   maxWidth: "1000px",
   marginTop: "3rem",
   flexDirection: "row",
@@ -93,6 +94,11 @@ export const visionSignature = style({
 globalStyle(`${visionSignature} span`, {
   margin: "0 1rem",
   fontSize: "2rem",
+  '@media': {
+    'screen and (max-width: 500px)': {
+      display: 'block',
+    },
+  },
 });
 
 export const backgroundGradient = style({

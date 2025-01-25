@@ -1,6 +1,11 @@
 import { style, globalStyle } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
+globalStyle('p', {
+  whiteSpace: 'pre-wrap',
+  wordBreak: 'keep-all',
+});
+
 export const textGradient = style({
   background: vars.text.gradient,
   WebkitBackgroundClip: "text",

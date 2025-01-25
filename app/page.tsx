@@ -13,13 +13,13 @@ export default function Home() {
       <main className={styles.introRoot}>
         <div className={styles.introHeader}></div>
         <h1 className={`${styles.introTitle} ${styles.textGradient}`}>
-          DA研HPへようこそ!
+          <p>DA研HPへ<wbr />ようこそ!</p>
         </h1>
         <div className={styles.introSubtitle}>
           <p>データ分析研究会(通称DA研)は兵庫県立大学の部活です。</p>
           <p>
             「<strong>データサイエンスのセミプロ集団へ</strong>
-            」を合言葉に、勉強会の開催やコンペティションへの参加等を通じて、日々技術力を高めています。
+            」を合言葉に、勉強会の開催やコンペティションへの<wbr />参加等を通じて、日々技術力を高めています。
           </p>
         </div>
         <div className={styles.introButtons}>
@@ -49,7 +49,7 @@ export default function Home() {
               href="https://www.datascientist.or.jp/dssjournal/2021/07/16/dodv17/"
               target="_blank"
             >
-              「データサイエンティストに求められるスキルセット」
+              「データサイエンティストに<wbr />求められるスキルセット」
             </Link>
             に基づき、以下の4つの部門に分かれて活動しています。
           </p>
