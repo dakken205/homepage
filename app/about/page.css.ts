@@ -1,5 +1,5 @@
-import { style, globalStyle, keyframes } from "@vanilla-extract/css";
 import { vars } from "@/app/theme.css";
+import { globalStyle, keyframes, style } from "@vanilla-extract/css";
 
 const fadeIn = keyframes({
   "0%": {
@@ -68,6 +68,8 @@ export const visionTitle = style({
   fontWeight: "700",
   fontSize: "2.5rem",
   marginBottom: "1.5rem",
+  whiteSpace: "pre-wrap",
+  wordBreak: "keep-all",
 });
 
 export const visionText = style({
@@ -93,6 +95,12 @@ export const visionSignature = style({
 globalStyle(`${visionSignature} span`, {
   margin: "0 1rem",
   fontSize: "2rem",
+  "@media": {
+    "screen and (max-width: 500px)": {
+      display: "block",
+      margin: 0,
+    },
+  },
 });
 
 export const backgroundGradient = style({
