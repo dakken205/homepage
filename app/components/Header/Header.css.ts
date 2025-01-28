@@ -1,5 +1,5 @@
-import { style, keyframes } from "@vanilla-extract/css";
 import { vars } from "@/app/theme.css";
+import { keyframes, style } from "@vanilla-extract/css";
 
 const crossDown = keyframes({
   "0%": { transform: "rotate(0deg) translate(0px, 0px)" },
@@ -168,4 +168,8 @@ export const menuLinks = style({
   gap: "24px",
   fontSize: "14px",
   color: "#696969",
+});
+
+export const arrow = style({
+  fontFamily: "system-ui",
 });

@@ -74,6 +74,10 @@ export default function Header() {
               <LinkButton href="/about">DA研について</LinkButton>
               <LinkButton href="/blog">ブログ</LinkButton>
               <LinkButton href="/contact">お問い合わせ</LinkButton>
+              <LinkButton href="https://dakken.co.jp">
+                合同会社DA研
+                <span className={styles.arrow}> ↗</span>
+              </LinkButton>
             </div>
           </div>
           <button className={styles.menuButton} onClick={onClickToggle}>
@@ -95,6 +99,9 @@ export default function Header() {
             <LinkButton href="/about">DA研について</LinkButton>
             <LinkButton href="/blog">ブログ</LinkButton>
             <LinkButton href="/contact">お問い合わせ</LinkButton>
+            <LinkButton href="https://dakken.co.jp">
+              合同会社 DA 研 <span className={styles.arrow}> ↗</span>
+            </LinkButton>
           </div>
         </div>
       )}
