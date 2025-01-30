@@ -38,10 +38,10 @@ export default function Contact() {
         body: JSON.stringify({ ...data, token }),
       });
 
+      console.log("res", res);
+
       if (res.ok) {
         redirect("/contact/success");
-      } else {
-        console.error("Failed to send email", res);
       }
     },
     [executeRecaptcha, name, email, content]
