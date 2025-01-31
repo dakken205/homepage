@@ -29,7 +29,7 @@ export default function About() {
             </p>
             <div className={styles.visionSignature}>
               データ分析研究会 部長
-              <span className={zen_kurenaido.className}>平野徳麻</span>
+              <span className={zen_kurenaido.className}>多田幸平</span>
             </div>
           </div>
         </section>
@@ -73,13 +73,12 @@ export default function About() {
             </tr>
             <tr>
               <th>部長</th>
-              <td>平野徳麻</td>
+              <td>多田幸平</td>
             </tr>
             <tr>
               <th>顧問</th>
               <td>
-                <Link href="https://researchmap.jp/msasa">笹嶋宗彦</Link>、
-                <Link href="https://researchmap.jp/ken_ishibashi">石橋健</Link>
+                <Link href="https://researchmap.jp/msasa">笹嶋宗彦</Link>
               </td>
             </tr>
           </thead>
