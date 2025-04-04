@@ -28,8 +28,8 @@ export default function About() {
               そんな現状を解決すべく、データ分析研究会は勉強会やコンペティション参加、委託業務等を通じ、データサイエンティストのセミプロ集団を目指し日々邁進してまいります。我々一人ひとり技術が、兵庫県、ひいては日本社会の一助となることを願って。
             </p>
             <div className={styles.visionSignature}>
-              データ分析研究会 部長
-              <span className={zen_kurenaido.className}>多田幸平</span>
+              データ分析研究会 初代部長
+              <span className={zen_kurenaido.className}>新福一貴</span>
             </div>
           </div>
         </section>
@@ -73,12 +73,13 @@ export default function About() {
             </tr>
             <tr>
               <th>部長</th>
-              <td>多田幸平</td>
+              <td>平野徳麻</td>
             </tr>
             <tr>
               <th>顧問</th>
               <td>
-                <Link href="https://researchmap.jp/msasa">笹嶋宗彦</Link>
+                <Link href="https://researchmap.jp/msasa">笹嶋宗彦</Link>、
+                <Link href="https://researchmap.jp/ken_ishibashi">石橋健</Link>
               </td>
             </tr>
           </thead>
