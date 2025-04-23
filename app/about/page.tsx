@@ -28,7 +28,7 @@ export default function About() {
               そんな現状を解決すべく、データ分析研究会は勉強会やコンペティション参加、委託業務等を通じ、データサイエンティストのセミプロ集団を目指し日々邁進してまいります。我々一人ひとり技術が、兵庫県、ひいては日本社会の一助となることを願って。
             </p>
             <div className={styles.visionSignature}>
-              データ分析研究会 初代部長
+              データ分析研究会 創設者
               <span className={zen_kurenaido.className}>新福一貴</span>
             </div>
           </div>
